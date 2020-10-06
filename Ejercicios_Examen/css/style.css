@@ -1,0 +1,6 @@
+﻿.lista-respuestas {
+    list-style-type: upper-alpha;
+}
+.respuesta_correcta {
+    font-weight: bold;
+}
