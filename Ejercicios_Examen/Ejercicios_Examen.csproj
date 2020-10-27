@@ -68,18 +68,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="113.html" />
-    <Content Include="136.html" />
     <Content Include="147.html" />
     <Content Include="130.html" />
     <Content Include="164.html" />
     <Content Include="181.html" />
     <Content Include="css\style.css" />
-    <Content Include="12.html" />
-    <Content Include="28.html" />
-    <Content Include="45.html" />
-    <Content Include="62.html" />
-    <Content Include="79.html" />
-    <Content Include="96.html" />
+    <Content Include="012.html" />
+    <Content Include="028.html" />
+    <Content Include="045.html" />
+    <Content Include="062.html" />
+    <Content Include="079.html" />
+    <Content Include="096.html" />
     <Content Include="img\ejer_12_01.jpg" />
     <Content Include="img\ejer_12_02.jpg" />
     <Content Include="img\ejer_45_01.jpg" />
