@@ -12,13 +12,13 @@
     <xmp>
     	You develop an interactive scalable vector graphics (SVG) application. You write the following HTML markup that makes a rectangle rotate:
 
-    	<svg width="200px" height="200px">
-    		<g transform="translate8400,400)" id="myimage">
-    			<rect id="mySquare" x="-10" width="20" height="20" color="blue"/>
-    		</g>
-    	</svg>
-    	<input id="speed" type="text" value="10"/>
-    	<button id="zoom" onclick="startAnimation();">Start</button>
+	    <svg width="800px" height="800px">
+	    		<g transform="translate(400,400)" id="myImage">
+	    			<rect id="mySquare" x="-10" y="-10" width="20" height="20" color="blue"/>
+	    		</g>
+	    </svg>
+		<input id="speed" type="text" value="10"/>
+		<button id="zoom" onclick="startAnimation();">Start</button>
 
     	You need to control the speed of the rotating rectangle.
 		
@@ -71,13 +71,15 @@
     <br><br>
     <b>Comprobación:</b>
     <br>
-    <svg width="200px" height="200px">
+
+    <svg width="800px" height="800px">
     		<g transform="translate(400,400)" id="myImage">
-    			<rect id="mySquare" x="10" y="10" width="200" height="200" color="blue"/>
+    			<rect id="mySquare" x="-10" y="-10" width="20" height="20" color="blue"/>
     		</g>
-    	</svg>
-    	<input id="speed" type="text" value="10"/>
-    	<button id="zoom" onclick="startAnimation();">Start</button>
+    </svg>
+	<input id="speed" type="text" value="10"/>
+	<button id="zoom" onclick="startAnimation();">Start</button>
+
 <script>
 	var mySquareShape;
 	var myTimer;
@@ -90,14 +92,10 @@
 	}
 	function animateImage()
 	{
-		if (mySquareShape.currentTheta > 90)
-		{
-		clearInterval(myTimer); // The square has rotated enough, instruct the browser to stop calling the doAnim () function.
-		return; // No point in continuing; stop now.
-		}
+		
 		mySquareShape.setAttribute("transform","rotate("+ mySquareShape.currentTheta + ")");
 		mySquareShape.currentTheta +=0.1;
-		console.log(mySquareShape.currentTheta);
+		
 	}
 </script>
 
