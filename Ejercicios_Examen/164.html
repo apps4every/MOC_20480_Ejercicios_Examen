@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>164</title>
+</head>
+<body>
+    <b>Question 164</b>
+    <xmp>
+        You are validating user input by using built-in JavaScript functions.
+        
+        The application must:
+        
+            · Store the value that is entered in a variable named inputValue
+            · Use the built-in isNaN(tnputValue) function to evaluate the data type
+
+        You need to validate the return value of the isNaN(inputValue) function.
+        
+        Which values will be returned? 
+
+        isNaN (-13)
+        isNaN (24.3)
+        isNaN (3*8)
+        isNaN ('5')
+    </xmp>
+	<br>
+    <p><b>Respuesta correcta:</b> Todas las funciones isNan devuelve false ya que los valores que se le pasan son correctos.</p>
+    <p>La función isNaN devuelve true cuando el valor que se la pasa es un número inválido. '5' es igual a 5.</p>
+    
+    <p>
+    Referencias:<br><br>
+    <a href="https://www.w3schools.com/html/html5_svg.asp">https://www.w3schools.com/html/html5_svg.asp</a><br><br>
+    <a href="https://www.freecram.com/question/Microsoft.70-480.v2018-03-23.q153/you-develop-an-interactive-scalable-vector-graphic-svg-application-you-write-the-following-code-line">https://www.freecram.com/question/Microsoft.70-480.v2018-03-23.q153/you-develop-an-interactive-scalable-vector-graphic-svg-application-you-write-the-following-code-line</a><br><br>
+    <p>Comprobación: (habilitar herramienta desarrollo con F12 y ver consola)</p>
+    <script>
+        console.log ("isNan (-13): " + isNaN (-13));
+        console.log ("isNan (24.3): " + isNaN (24.3));
+        console.log ("isNan (3*8): " + isNaN (3*8));
+        console.log ("isNan ('5'): " + isNaN ('5'));
+        console.log ("isNan ('2w3'): " + isNaN ('2w3'));
+    </script>
+
+</body>
+</html>

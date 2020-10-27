@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>181</title>
+</head>
+<body>
+    <b>Question 181</b>
+    <xmp>
+        You have a webpage that includes the following markup and code:
+        
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <script>
+                function start() {
+                    var counter=10;
+                    var fun = function () {
+                        counter=20;
+                    }
+                    return counter;                    
+                }
+            </script>
+        </head>
+        <body>
+        <button id="submit" onclick="alert(start());">submit</button>
+        </body>
+        </html>
+
+        You need to troubleshoot the code by clicking the Submit button.
+        
+        Which value will be displayed?
+        
+        A. 10
+        B. 20
+        C. Undefined
+        D. Runtime error
+
+    </xmp>
+
+	<br>
+    <p><b>Respuesta correcta:</b> A</p>
+
+    <p>Comprobación:</p>
+    <script>
+        function start() {
+            var counter=10;
+            var fun = function () {
+                counter=20;      
+            }     
+            return counter;                    
+        }
+    </script>
+    <button id="submit" onclick="alert(start());">submit</button>
+    <p>
+    Referencias:<br><br>
+    <a href="https://www.w3schools.com/js/js_scope.asp">https://www.w3schools.com/js/js_scope.asp</a></p>
+    <p>
+        La respuesta es correcta, pero el mótivo erróneo.</p>
+    <p>Para que se devolviera el valor 20 en lugar de 10, debería añadirse la línea "fun();" justo antes de "return counter;".</p>
+    <p>Es decir, nunca se ejecuta la línea counter=20;</p>
+</body>
+</html>

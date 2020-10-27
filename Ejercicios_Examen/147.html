@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <link rel="StyleSheet" href="css/style.css">
+    <title>147</title>
+</head>
+<body>
+    <b>Question 147</b>
+    <xmp>
+        You develop an HTML5 webpage that contains the following HTML markup:
+
+        01 <script>
+        02 
+        03 </script>
+        04 <svg height="150" width="150" id="myGraphic">
+        05 	<circle cx="25" r="20" cy="20" fill="orange" id="myCircle"/>
+        06 </svg>
+        07 <button id="zoom" onclick="zoomIn();">Zoom</button>
+
+        You need to increase the size of the circle by 50 percent.
+		
+		Which code segment should you insert at line 02?
+    </xmp>
+	<br>
+    <b>Respuesta correcta: D</b>
+    <xmp>
+        function zoomIn()
+        {
+            var myCircle = document.getElementById("myCircle");
+            myCircle.r=myCircle.r *1.5;
+            
+        }
+    </xmp>
+    Referencias:<br><br>
+    <a href="https://www.w3schools.com/html/html5_svg.asp">https://www.w3schools.com/html/html5_svg.asp</a><br><br>
+    <a href="https://www.freecram.com/question/Microsoft.70-480.v2018-03-23.q153/you-develop-an-interactive-scalable-vector-graphic-svg-application-you-write-the-following-code-line">https://www.freecram.com/question/Microsoft.70-480.v2018-03-23.q153/you-develop-an-interactive-scalable-vector-graphic-svg-application-you-write-the-following-code-line</a><br><br>
+    <p>Comprobación:</p>
+    <script>
+        function zoomIn()
+        {
+            var myCircle = document.getElementById("myCircle");
+            myCircle.r=myCircle.r *1.5;
+            
+        }
+    </script>
+    <svg height="150" width="150" id="myGraphic">
+    	<circle cx="25" r="20" cy="20" fill="orange" id="myCircle"/>
+    </svg>
+    <button id="zoom" onclick="zoomIn();">Zoom</button>
+
+</body>
+</html>

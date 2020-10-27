@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <link rel="StyleSheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <title>136</title>
+</head>
+<body>
+    <b>Question 136</b>
+    <xmp>
+        You develop an HTML5 webpage that contains the following HTML markup:
+
+        <label for="loanTypes"Loan Types></label>
+        <select name ="loanTypes" id="loanTypes" multiple="multiple">
+            <option>Secured</option>
+            <option selected="selected">Unsecured</option>
+            <option>Demand</option>
+            <option selected="selected">Subsidized</option>
+        </select>
+
+        The page includes the fllowing Javascript code:
+
+        var selectedValues='';
+
+        You have the following requirements:
+        
+        * Retrieve the content for any OPTION elements when the value of the selected attribute equals selected.
+        
+        * Add the content to a comma separated string.
+        
+        You need to retrieve the required data.
+        
+        Which two code segments should you add to the webpage? Each correct answer presents a complete
+        solution.
+
+        NOTE: Each correct selection is worth one point.
+    </xmp>
+
+    <br>
+    <b>Correct answer: C y D</b>
+    <br>
+    <xmp>
+    Opción C:
+        $("select option:selected").each(function() {
+            selectedValues += $(this).text() + ',';
+        });
+    Opción D:
+        $("#loanTypes option:selected").each(function() {
+            selectedValues += $(this).text() + ',';
+        });
+    </xmp>
+    <br> 
+    La A no es, usa checked en lugar de select que sería para otro tipo de campos, checkbox.
+    <br>
+    La B no es, al usar el método each necesita usar this para obtener el valor de la propiedad text, en su lugar usar el propio objeto loanTypes.
+    <br><br>
+    <b>Comprobación: (habilita opciones de desarrollo para ver consola pulsando F12)</b>
+    <br><br>
+    <label for="loanTypes"Loan Types></label>
+    <select name ="loanTypes" id="loanTypes" multiple="multiple">
+        <option>Secured</option>
+        <option selected="selected">Unsecured</option>
+        <option>Demand</option>
+        <option selected="selected">Subsidized</option>
+    </select>
+    
+    <script>
+        console.log('Opcion C:');
+        var selectedValues = '';
+        $("select option:selected").each(function() {
+            selectedValues += $(this).text() + ',';
+        });
+        console.log (selectedValues);
+
+        console.log('Opcion D:');
+        selectedValues = '';
+        $("#loanTypes option:selected").each(function() {
+            selectedValues += $(this).text() + ',';
+        });
+        console.log (selectedValues);
+</script>
+
+</body>
+</html>

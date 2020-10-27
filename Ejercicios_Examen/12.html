@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <link rel="StyleSheet" href="css/style.css">
+    <title>12</title>
+</head>
+<body>
+    <b>Question 12</b>
+    <xmp>        
+        You are creating a class named Consultant that must inherit from the Employee class. The Consultant class must modify the inherited PayEmployee method. The Employee class is defined as follows.
+
+        function Employee() {}
+            Employee.prototype.PayEmployee = function ( ){
+            alert(‘Hi there!’);
+        }
+
+        Future instances of Consultant must be created with the overridden method.
+        
+        You need to write the code to implement the Consultant class.
+        
+        Which code segments should you use? (Each correct answer presents part of the  solution. Choose two.)
+
+        A.
+            Consultant.PayEmployee = function ()
+            {
+            alert(‘Pay Consulant’);
+            }
+
+        B.
+            Consultant.prototype.PayEmployee = function ()
+            {
+            alert(‘Pay Consultant’);
+            }
+
+        C.
+            function Consultant () {
+            Employee.call(this);
+            }
+            Consultant.prototype = new Employee();
+            Consultant.prototype.constructor = Consultant;
+
+        D.
+            function Consultant() {
+            Employee.call(this); }
+            Consultant.prototype.constructor = Consultant.create;
+</xmp>
+    <p>Respuesta: BC</p>
+    <p>Explicación</p>
+    <xmp>
+        * Object.prototype.constructor
+        Returns a reference to the Object function that created the instance’s prototype. Note that the value of this
+        property is a reference to the function itself, not a string containing the function’s name. The value is only readonly for primitive values such as 1, true and “test”.
+        * The constructor property is created together with the function as a single property of func.prototype.
+        Object.prototype.constructor
+    </xmp>
+    <p>Referencia:</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor</a>
+    
+                
+    
+</body>
+</html>

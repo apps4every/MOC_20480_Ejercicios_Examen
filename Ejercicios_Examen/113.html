@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <link rel="StyleSheet" href="css/style.css">
+    <title>113</title>
+</head>
+<body>
+    <b>Question 113</b>
+    <xmp>
+    You develop an HTML5 application that allows users to upload files from their local computers.
+
+    The user interface must remain responsive during the upload.
+
+    You need to implement the file upload functionality for the application.
+
+    Which two actions should you perform? (Each correct answer presents a complete solution. Choose two.)
+
+    A. Use an HTML form with a file type INPUT element that targets a hidden IFRAME element.
+
+    B. Use a file type INPUT element, and then use the Web Storage API to upload the file.
+    
+    C. Use a FormData object and upload the file by using XMLHttpRequest.
+    
+    D. Register the file protocol by using protocol handler registration API and then upload the file by using XMLHttpRequest.
+
+    E. Use the FileSystem API to load the file, and then use the jQuery post method to upload the file to the server.
+    </xmp>
+
+    <br>
+    <b>Correct answer: BD</b>
+    <br><br>
+    <b>Comprobación:</b>
+    <br><br>
+    Se necesita usar funciones asíncronas, es decir que no dejen al usuario en espera de finalizar la operación de enviar el fichero.<br><br>
+    La opciones válidas serían B: "Web Storage API"  y D: "XMLHttpRequest"<br><br>
+    Referencia:<br><br>
+    <a href="https://www.w3schools.com/js/js_ajax_http.asp">https://www.w3schools.com/js/js_ajax_http.asp</a><br><br>
+    Sin embargo <strong>también podría ser solución la C</strong>, según la siguiente referencia: <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects">https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects</a><br><br>
+    En el siguiente enlace se indica como usar XMLHttpRequest para mostrar el progreso de la petición al servidor:<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest</a>
+
+
+
+</body>
+</html>
